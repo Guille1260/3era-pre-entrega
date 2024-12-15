@@ -1,0 +1,49 @@
+{% extends 'AppPlataforma/Base.html' %}
+
+
+{% block contenidoDinamico %}
+   
+<main class="conteiner-main" id="estudiantes">
+    
+    <div class="conteiner-titulo">
+        <h1>Nuestros estudiantes</h1>
+    </div>
+    <section class="seccion-estudiantes">
+        <div class="d-flex flex-column align-items-center mb-2">
+            
+            <form action="">
+                <input type="text" name="lupa" placeholder="nombre del curso" >
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">nombre</th>
+                    <th scope="col">apellido</th>
+                    <th scope="col">funciones</th>
+                    <th scope="col"><button>agregar<i class="fa-solid fa-plus"></i></button></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  {% for estudiante in estudiantes  %}
+                    <tr>
+                        <td>{{estudiante.id}}</td>
+                        <td scope="row">{{estudiante.nombre}}</td>
+                        <td>{{estudiante.apellido}}</td>
+                        <td><button>eliminar <i class="fa-solid fa-trash"></i></button><button>modificar<i class="fa-solid fa-pen"></i></button></td>
+                      
+                    </tr>
+                  {% endfor %}
+                    
+                  
+                  
+                </tbody>
+        </table>
+        
+    </section>
+    
+</main>
+{% endblock contenidoDinamico %}

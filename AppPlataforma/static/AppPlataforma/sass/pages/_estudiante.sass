@@ -1,0 +1,19 @@
+#estudiantes
+    display: grid
+    grid-template-areas: "titulo""tabla""botones"
+    row-gap: 10px
+
+    .conteiner-titulo
+        grid-area: titulo
+        text-align: center
+    .seccion-estudiantes
+        grid-area: tabla
+        display: grid
+        grid-template-areas: "buscador""tb"
+        .conteiner-bucador
+            grid-area: buscador
+        .table
+            grid-area: tb
+            margin: 10px
+    .conteiner-opciones-disponibles
+        grid-area: botones

@@ -1,0 +1,65 @@
+{% extends 'AppPlataforma/Base.html' %}
+
+
+{% block contenidoDinamico %}
+   
+    <main class="conteiner-main" id="profesores">
+        <div class="conteiner-titulo">
+            <h1>Conoce nuestros Profesores y tutores</h1>
+        </div>  
+        <section class="seccion-profesores">
+            <div class="d-flex flex-column align-items-center mb-2">
+                
+                <form action="">
+                    <input type="text" name="lupa" placeholder="profesional" >
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+             
+              <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">nombre</th>
+                      <th scope="col">apellido</th>
+                      <th scope="col">Profesion</th>
+                      <th scope="col">rol</th>
+                      <th scope="col">funciones</th>
+                      <th scope="col"><button>agregar<i class="fa-solid fa-plus"></i></button></th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for profesional in profesionales  %}
+                      <tr>
+                        <td scope="row">{{profesional.nombre}}</td>
+                        <td>{{profesional.apellido}}</td>
+                        <td>{{profesional.profesion}}</td>
+                        <td>{{profesional.rol}}</td>
+                        <td><button>eliminar <i class="fa-solid fa-trash"></i></button><button>modificar<i class="fa-solid fa-pen"></i></button></td>
+                      </tr>
+                    {% endfor %}  
+                  </tbody>
+              </table>
+              <div class="conteiner-tarjetas">
+              
+              {% for profesional in profesionales  %}
+              
+                  <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                      <h5 class="card-title">{{profesional.nombre}}</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">{{profesional.apellido}}</h6>
+                      <p class="card-text">explicacion</p>
+                      <p class="card-text">{{profesional.rol}}</p>
+                      </div>
+                  </div>
+              
+              </div>
+            {% endfor %}
+
+            
+            
+            
+        </section>
+       
+    </main>
+{% endblock contenidoDinamico %}

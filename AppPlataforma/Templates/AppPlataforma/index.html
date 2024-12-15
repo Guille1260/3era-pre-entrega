@@ -1,0 +1,96 @@
+{% extends 'AppPlataforma/Base.html' %}
+
+
+{% block contenidoDinamico %}
+    <main class="conteiner-main" id="Home">
+        <section class="banner">
+            <h1> ¡Binevenidos!</h1>
+            <p>somos la casa del codigo, Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quam expedita qui vero sed, inventore ullam, quo quisquam obcaecati sit rem amet, nisi nam neque perspiciatis quis. Quidem, tempore nemo. Quia!
+            </p>
+        </section>
+        <section class="seccion-servicios">
+            <h2>Servicio</h2>
+            <div class="conteiner-tarjetas">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section class="seccion-cursos">
+            <h2>Nuestros cursos</h2>
+            <div class="conteiner-tarjetas">
+                {% for curso  in cursos  %}
+                    
+                
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">{{curso.nombre}}</h5>
+                        <p class="card-text">Este es nuestro curso de java</p>
+                        <p class="card-text">duracion 3 meses</p>    
+                        <p class="card-text">los dias: {{curso.dia}}</p>                   
+                        </div>
+                    </div>
+                    
+                    
+                        
+                {% endfor %}
+                
+            </div>
+            <div>
+                <a href="{% url 'Cursos' %}">
+                    <button type="button">Ver todos los cursos</button>
+                </a>
+            </div>
+        </section>
+        <section class="seccion-profesores">
+            <h2>Nuestros Profesionales </h2>
+            <div class="conteiner-tarjetas">
+                
+                {% for profesional in profesionales  %}
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">{{profesional.nombre}}</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">{{profesional.apellido}}</h6>
+                        <p class="card-text">explicacion</p>
+                        <p class="card-text">{{profesional.rol}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                    
+                
+            </div>
+            <div>
+                <a href="{% url 'Profesionales' %}">
+                    <button type="button">Conoce nuestros profesionales</button>
+                </a>
+            </div>
+        </section>
+        <section class="seccion-preguntas">
+            preguntas frecuentes
+        </section>
+    </main>
+    
+{% endblock contenidoDinamico %}

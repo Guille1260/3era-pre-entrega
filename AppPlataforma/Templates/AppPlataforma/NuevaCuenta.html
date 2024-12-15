@@ -1,0 +1,28 @@
+{% extends 'AppPlataforma/Base.html' %}
+
+
+{% block contenidoDinamico %}
+   
+<main class="conteiner-main" id="nuevacuenta">
+    <section class="conteiner-form">
+        <h1>Crea tu cuenta</h1>
+        <form action=""  method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Usuario</label>
+            <input type="text" name="usuario" class="form-control">
+            
+            </div>
+            <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" name="contraseña" class="form-control">
+            </div>
+        
+            <button type="submit" class="btn btn-primary">iniciar sesion</button>
+            <div>
+                <span>ya teines cuenta? ingresa  <a href="{% url 'Loggin' %}">aqui</a></span>
+            </div>
+        </form>
+    </section>
+</main>
+{% endblock contenidoDinamico %}

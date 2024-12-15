@@ -1,0 +1,44 @@
+#Home
+    display: grid
+    grid-template-areas: "banner""servicios""cursos""profesores""preguntas"
+    row-gap: 10px
+
+    .banner
+        grid-area: banner
+        margin-top: 10px
+        width: 100%
+        height: 500px
+        text-align: center
+        align-content: center
+        border: 1px solid black
+    .seccion-servicios
+        grid-area: servicios
+        width: 100%
+        text-align: center
+        align-content: center
+        border: 1px solid black
+        .conteiner-tarjetas
+            display: flex
+            justify-content: center
+            .card
+                margin-left: 10px
+    .seccion-cursos
+        grid-area: cursos
+        width: 100%
+        text-align: center
+        align-content: center
+        border: 1px solid black
+    .seccion-profesores
+        grid-area: profesores
+        width: 100%
+        text-align: center
+        align-content: center
+        border: 1px solid black
+    .seccion-preguntas
+        grid-area: preguntas
+        width: 100%
+        text-align: center
+        align-content: center
+        border: 1px solid black
+
+        

@@ -1,0 +1,47 @@
+{% extends 'AppPlataforma/Base.html' %}
+
+{% block contenidoDinamico %}
+
+<dic class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-4">
+
+        
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Curso</label>
+                    <input type="text" name="curso" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Comisión</label>
+                    <input type="text" name="comision" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="diaSemana" class="form-label">Día</label>
+                    <select name="dia" id="diaSemana" class="form-control">
+                        <option value="lunes">Lunes</option>
+                        <option value="martes">Martes</option>
+                        <option value="miercoles">Miércoles</option>
+                        <option value="jueves">Jueves</option>
+                        <option value="viernes">Viernes</option>
+                        <option value="sabado">Sábado</option>
+                        <option value="domingo">Domingo</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="hora" class="form-label">Hora</label>
+                    <input type="text" name="hora" id="hora" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <div>
+                    {{ mensaje_error }}
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</dic>
+
+
+{% endblock contenidoDinamico %}

@@ -1,0 +1,90 @@
+{% extends 'AppPlataforma/Base.html' %}
+
+
+{% block contenidoDinamico %}
+   
+    <main class="conteiner-main" id="cursos">
+        <div class="conteiner-titulo">
+            <h1>Conoce nuestros cursos</h1>
+        </div>
+        
+        <section class="ofertas">
+            <h2>
+                conteiner de ofertas
+            </h2>
+        </section>
+        <section class="seccion-cursos">
+            <div class="d-flex flex-column align-items-center mb-2 conteiner-bucador">
+                <h2>Buscar Curso por nombre</h2>
+                <form action="">
+                    <input type="text" name="lupa" placeholder="nombre del curso" >
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+            <div class="filters-section">
+                <h3>Filtros</h3>
+                
+                
+                <button class="filter-btn">Aplicar Filtros</button>
+            </div>
+            <div class="conteiner-tarjetas">
+                
+                
+                <table class="table">
+                    <thead>
+                      <tr>
+                        
+                        <th scope="col">nombre</th>
+                        <th scope="col">comision</th>
+                        <th scope="col">dia</th>
+                        <th scope="col">hora</th>
+                        <th scope="col"><a href="{% url 'NuevoCurso' %}"><button>agregar<i class="fa-solid fa-plus"></i></button></a></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                        {% for curso  in cursos  %}
+                        <tr>
+                            <td>{{curso.nombre}}</td>
+                            <td scope="row">{{curso.comision}}</td>
+                            <td>{{curso.dia}}</td>
+                            <td>{{curso.hora}}</td>
+                            <td><button>eliminar <i class="fa-solid fa-trash"></i></button><button>modificar<i class="fa-solid fa-pen"></i></button></td>
+                          
+                        </tr>
+                      {% endfor %}
+                        
+                      
+                      
+                    </tbody>
+            </table>
+                    
+
+                {% for curso  in cursos  %}
+                    
+                
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">{{curso.nombre}}</h5>
+                        <p class="card-text">Este es nuestro curso de java</p>
+                        <p class="card-text">duracion 3 meses</p>    
+                        <p class="card-text">los dias: {{curso.dia}}</p>                   
+                        </div>
+                    </div>
+                    
+                    
+                        
+                {% endfor %}
+
+
+                
+            </div>
+            
+        </section>
+        <section class="conteiner-opciones-disponibles">
+            <button>agregar cursos</button>
+            <button>eliminar cursos</button>
+            <button>modificar cursos</button>         
+        </section>
+    </main>
+{% endblock contenidoDinamico %}

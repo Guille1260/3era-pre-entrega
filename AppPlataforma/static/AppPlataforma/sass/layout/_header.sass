@@ -1,0 +1,27 @@
+.conteiner-header
+    display: flex
+    height: 70px
+    justify-content: space-around
+    text-align: center
+    align-items: center
+    background: red
+    border: 1px solid black
+    .conteiner-menu-desk
+        display: flex
+        margin: auto
+        color:  black
+        list-style: none
+        @media screen and ( max-width: 1023px )
+            display: none
+        .nav-link
+            text-decoration: none
+            margin-left: 10px
+            text-transform: uppercase
+            color: white
+
+    @media screen and ( min-width: 1023px )
+        .btn-menu 
+            display: none
+    
+        
+        

@@ -1,0 +1,18 @@
+#cursos
+    display: grid
+    grid-template-areas: "titulo""ofertas""tarjetas""botones"
+    row-gap: 10px
+
+    .conteiner-titulo
+        grid-area: titulo
+        text-align: center
+    .ofertas
+        grid-area: ofertas
+    .seccion-cursos
+        grid-area: tarjetas
+        display: grid
+        grid-template-areas: "buscador""tarjetas"
+        .conteiner-bucador
+            grid-area: buscador
+        .conteiner-tarjetas
+            grid-area: tarjetas

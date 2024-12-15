@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "encabezado" "main" "pie";
+  grid-template-rows: repeat(3, auto);
+}
+body .conteiner-header {
+  grid-area: encabezado;
+}
+body .conteiner-main {
+  grid-area: main;
+  margin: 10px;
+}
+body .conteiner-footer {
+  grid-area: pie;
+}
+
+.conteiner-header {
+  display: flex;
+  height: 70px;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  background: red;
+  border: 1px solid black;
+}
+.conteiner-header .conteiner-menu-desk {
+  display: flex;
+  margin: auto;
+  color: black;
+  list-style: none;
+}
+@media screen and (max-width: 1023px) {
+  .conteiner-header .conteiner-menu-desk {
+    display: none;
+  }
+}
+.conteiner-header .conteiner-menu-desk .nav-link {
+  text-decoration: none;
+  margin-left: 10px;
+  text-transform: uppercase;
+  color: white;
+}
+@media screen and (min-width: 1023px) {
+  .conteiner-header .btn-menu {
+    display: none;
+  }
+}
+
+.conteiner-footer {
+  border: 1px solid black;
+}
+
+#Home {
+  display: grid;
+  grid-template-areas: "banner" "servicios" "cursos" "profesores" "preguntas";
+  row-gap: 10px;
+}
+#Home .banner {
+  grid-area: banner;
+  margin-top: 10px;
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  align-content: center;
+  border: 1px solid black;
+}
+#Home .seccion-servicios {
+  grid-area: servicios;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  border: 1px solid black;
+}
+#Home .seccion-servicios .conteiner-tarjetas {
+  display: flex;
+  justify-content: center;
+}
+#Home .seccion-servicios .conteiner-tarjetas .card {
+  margin-left: 10px;
+}
+#Home .seccion-cursos {
+  grid-area: cursos;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  border: 1px solid black;
+}
+#Home .seccion-profesores {
+  grid-area: profesores;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  border: 1px solid black;
+}
+#Home .seccion-preguntas {
+  grid-area: preguntas;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  border: 1px solid black;
+}
+
+#cursos {
+  display: grid;
+  grid-template-areas: "titulo" "ofertas" "tarjetas" "botones";
+  row-gap: 10px;
+}
+#cursos .conteiner-titulo {
+  grid-area: titulo;
+  text-align: center;
+}
+#cursos .ofertas {
+  grid-area: ofertas;
+}
+#cursos .seccion-cursos {
+  grid-area: tarjetas;
+  display: grid;
+  grid-template-areas: "buscador" "tarjetas";
+}
+#cursos .seccion-cursos .conteiner-bucador {
+  grid-area: buscador;
+}
+#cursos .seccion-cursos .conteiner-tarjetas {
+  grid-area: tarjetas;
+}
+
+#profesores {
+  display: grid;
+  grid-template-areas: "titulo" "tabla" "botones";
+  row-gap: 10px;
+}
+#profesores .conteiner-titulo {
+  grid-area: titulo;
+  text-align: center;
+}
+#profesores .seccion-profesores {
+  grid-area: tabla;
+  display: grid;
+  grid-template-areas: "buscador" "tb";
+}
+#profesores .seccion-profesores .conteiner-bucador {
+  grid-area: buscador;
+}
+#profesores .seccion-profesores .table {
+  grid-area: tb;
+  margin: 10px;
+}
+#profesores .conteiner-opciones-disponibles {
+  grid-area: botones;
+}
+
+#estudiantes {
+  display: grid;
+  grid-template-areas: "titulo" "tabla" "botones";
+  row-gap: 10px;
+}
+#estudiantes .conteiner-titulo {
+  grid-area: titulo;
+  text-align: center;
+}
+#estudiantes .seccion-estudiantes {
+  grid-area: tabla;
+  display: grid;
+  grid-template-areas: "buscador" "tb";
+}
+#estudiantes .seccion-estudiantes .conteiner-bucador {
+  grid-area: buscador;
+}
+#estudiantes .seccion-estudiantes .table {
+  grid-area: tb;
+  margin: 10px;
+}
+#estudiantes .conteiner-opciones-disponibles {
+  grid-area: botones;
+}
+
+#loggin .conteiner-form {
+  margin: auto;
+  height: 500px;
+  width: 400px;
+  border: 1px solid black;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  lign-items: center;
+  text-align: center;
+}
+
+#nuevacuenta .conteiner-form {
+  margin: auto;
+  height: 500px;
+  width: 400px;
+  border: 1px solid black;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  lign-items: center;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
